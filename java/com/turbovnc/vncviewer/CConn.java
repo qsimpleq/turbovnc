@@ -1820,6 +1820,7 @@ public class CConn extends CConnection implements UserPasswdGetter,
         keysym = Keysyms.KP_0 + keycode - KeyEvent.VK_0;
 
       switch (keycode) {
+      case KeyEvent.VK_SPACE: keysym = Keysyms.Space; if (key != keycode && location == 0) return; break;
       case KeyEvent.VK_BACK_SPACE: keysym = Keysyms.BackSpace;  break;
       case KeyEvent.VK_TAB:        keysym = Keysyms.Tab;  break;
       case KeyEvent.VK_ENTER:

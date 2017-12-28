@@ -56,6 +56,7 @@ public class Keysyms {
   public static final int Sys_Req = 0xFF15;
   public static final int Escape = 0xFF1B;
   public static final int Delete = 0xFFFF;
+  public static final int Space = 0xFF80;
 
   public static final int Home = 0xFF50;
   public static final int Left = 0xFF51;
