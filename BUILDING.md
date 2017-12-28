@@ -338,3 +338,9 @@ configuration you built (such as *{build_directory}*\Debug\ or
 Building a Windows installer requires
 [Inno Setup](http://www.jrsoftware.org/isinfo.php).
 iscc.exe should be in your `PATH`.
+
+
+VncViewer.jar only
+------------------
+
+cmake -G"Unix Makefiles" -DTVNC_BUILDJAVA=1 -DTVNC_BUILDNATIVE=0 -DTVNC_BUILDSERVER=0 && make java
