@@ -48,7 +48,7 @@ class OptionsDialog extends Dialog implements ActionListener, ChangeListener,
   JSlider jpegQualityLevel, subsamplingLevel, compressionLevel;
   JCheckBox viewOnly, acceptClipboard, sendClipboard, acceptBell,
     reverseScroll;
-  JCheckBox fullScreen, shared, cursorShape, showToolbar;
+  JCheckBox fullScreen, shared, cursorShape, enableHotkeys, showToolbar;
   JCheckBox secVeNCrypt, encNone, encTLS, encX509;
   JCheckBox secNone, secVnc, secUnixLogin, secPlain, secIdent,
     sendLocalUsername, tunnel;

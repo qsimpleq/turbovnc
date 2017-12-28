@@ -71,6 +71,7 @@ public class Options {
     compressLevel = old.compressLevel;
     colors = old.colors;
     cursorShape = old.cursorShape;
+    enableHotkeys = old.enableHotkeys;
     continuousUpdates = old.continuousUpdates;
     if (old.user != null) user = new String(old.user);
     sendLocalUsername = old.sendLocalUsername;
@@ -177,6 +178,7 @@ public class Options {
     printOpt("compressLevel", compressLevel);
     printOpt("colors", colors);
     printOpt("cursorShape", cursorShape);
+    printOpt("enableHotkeys", enableHotkeys);
     printOpt("continuousUpdates", continuousUpdates);
     printOpt("user", user);
     printOpt("sendLocalUsername", sendLocalUsername);
@@ -225,6 +227,7 @@ public class Options {
   public int compressLevel;
   public int colors;
   public boolean cursorShape;
+  public boolean enableHotkeys;
   public boolean continuousUpdates;
   public String user;
   public boolean sendLocalUsername;

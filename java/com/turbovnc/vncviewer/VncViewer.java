@@ -681,6 +681,7 @@ public class VncViewer extends javax.swing.JApplet
     options.fullScreen.setSelected(opts.fullScreen);
     options.span.setSelectedIndex(opts.span);
     options.cursorShape.setSelected(opts.cursorShape);
+    options.enableHotkeys.setSelected(opts.enableHotkeys);
     options.acceptBell.setSelected(opts.acceptBell);
     options.showToolbar.setSelected(VncViewer.showToolbar.getValue());
     if (opts.scalingFactor == Options.SCALE_AUTO) {
@@ -739,6 +740,7 @@ public class VncViewer extends javax.swing.JApplet
 
     opts.shared = options.shared.isSelected();
     opts.cursorShape = options.cursorShape.isSelected();
+    opts.enableHotkeys = options.enableHotkeys.isSelected();
 
     options.getSecurityOptions();
     SecurityClient.x509ca.setParam(options.x509ca.getText());
@@ -969,6 +971,7 @@ public class VncViewer extends javax.swing.JApplet
     }
 
     opts.cursorShape = cursorShape.getValue();
+    opts.enableHotkeys = enableHotkeys.getValue();
     opts.continuousUpdates = continuousUpdates.getValue();
     opts.copyRect = copyRect.getValue();
     if (user.getValue() != null) opts.user = new String(user.getValue());
@@ -1244,6 +1247,10 @@ public class VncViewer extends javax.swing.JApplet
   "cause performance problems on slow networks.  However, using a remote " +
   "cursor can be advantageous with shared sessions, since it will allow you " +
   "to see the cursor movements of other connected users.", true);
+
+  static BoolParameter enableHotkeys
+  = new BoolParameter("EnableHotkeys",
+ "Enable vncviewer hotkeys, like CtrlAltShift + F, etc.", true);
 
   static StringParameter desktopSize
   = new StringParameter("DesktopSize",

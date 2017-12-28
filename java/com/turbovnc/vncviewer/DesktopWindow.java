@@ -562,7 +562,7 @@ class DesktopWindow extends JPanel implements Runnable, MouseListener,
       return;
     }
     int ctrlAltShiftMask = Event.SHIFT_MASK | Event.CTRL_MASK | Event.ALT_MASK;
-    if ((e.getModifiers() & ctrlAltShiftMask) == ctrlAltShiftMask) {
+    if (((e.getModifiers() & ctrlAltShiftMask) == ctrlAltShiftMask) && VncViewer.enableHotkeys.getValue()) {
       switch (e.getKeyCode()) {
         case KeyEvent.VK_F:
           cc.toggleFullScreen();
